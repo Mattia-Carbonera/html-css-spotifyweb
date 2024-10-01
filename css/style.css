@@ -72,9 +72,7 @@ a {
 }
 
 .add-playlist-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 
   height: 35px;
   width: 35px;
