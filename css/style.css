@@ -12,6 +12,10 @@ a {
   color: white;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 /* # UTILS */
 
 .container {
@@ -139,7 +143,24 @@ a {
 .main {
   display: flex;
   height: calc(100vh - 90px);
+
   z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  background-color: #080b12;
+  color: white;
+  padding: 20px;
+}
+
+.upgrade {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid white;
 }
 
 .main-content {
@@ -152,8 +173,70 @@ a {
   height: 90px;
 }
 
-.content {
+/* content */
+
+.nav {
+  color: #74767c;
+  font-size: 0.8rem;
+  text-align: center;
 }
+
+.nav li {
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+.content {
+  background-color: #141922;
+  height: calc(100vh - 180px);
+
+  overflow-y: auto;
+
+  /* debug */
+  /* min-height: 100px; */
+}
+
+.content h2,
+.content h3 {
+  color: white;
+}
+
+.card {
+  /* display: flex;
+  flex-direction: column; */
+  margin: 0 30px;
+  width: 180px;
+  height: 50%;
+
+  text-align: center;
+}
+
+.playlist-recently {
+  /* height: calc(100vh - 90px); */
+}
+
+.playlist-recently h2 {
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
+.recently-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  width: 100%;
+}
+
+.content span {
+  color: #74767c;
+}
+
+.playlist-recently img {
+  height: 180px;
+}
+
+/* footer */
 
 footer {
   height: 90px;
@@ -166,14 +249,6 @@ footer {
 
 footer {
   background-color: aqua;
-}
-
-.header {
-  background-color: bisque;
-}
-
-.content {
-  background-color: lightsalmon;
 }
 
 /* ____footer____ */
