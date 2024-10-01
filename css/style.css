@@ -82,8 +82,13 @@ a {
   display: none;
 }
 
+.library-playlist {
+  color: white;
+}
+
 .library-playlist > ul li {
   list-style: none;
+  color: lightgray;
 
   padding: 6px 0;
 }
@@ -91,6 +96,7 @@ a {
 .lower-sidebar {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   padding: 12px;
 }
@@ -123,6 +129,10 @@ a {
 
 .download-icon {
   margin-bottom: 8px;
+}
+
+.download-icon > span {
+  margin-left: 8px;
 }
 
 /* ____main____ */
