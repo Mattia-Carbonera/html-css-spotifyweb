@@ -14,13 +14,108 @@
   width: 1000px;
   max-width: 100%;
 }
+/* ____sidebar____ */
+.sidebar {
+  display: flex;
+  flex-direction: column;
 
-.navbar {
-  width: 70px;
+  width: 50px;
   height: 100%;
+
   background-color: lightcoral;
 }
 
+.upper-sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 12px;
+}
+
+.spotify-logo {
+  display: flex;
+
+  align-items: center;
+  padding-bottom: 10px;
+
+  color: white;
+}
+
+.spotify-logo > a {
+  padding-right: 10px;
+}
+
+.upper-side-logo {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 30px;
+}
+
+.add-playlist {
+  display: flex;
+  align-items: center;
+
+  padding: 5px 0;
+}
+
+.add-playlist-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 35px;
+  width: 35px;
+  font-size: 2rem;
+  margin-right: 5px;
+  background-color: lightgray;
+}
+
+.library-playlist > ul li {
+  list-style: none;
+
+  padding: 6px 0;
+}
+
+.lower-sidebar {
+  display: flex;
+  flex-direction: column;
+
+  padding: 12px;
+}
+
+.lower-sidebar img {
+  padding-bottom: 10px;
+}
+
+.lower-sidebar img:first-child {
+  height: 25px;
+}
+
+.download-icon,
+.profile-icon {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.download-icon > span,
+.profile-icon > span {
+  padding-left: 10px;
+}
+
+.download-icon {
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 15px;
+}
+
+.lower-sidebar img:nth-child(2) {
+  background-color: lightgray;
+
+  padding: 5px;
+  border-radius: 50%;
+}
+
+/* ____main____ */
 .main {
   display: flex;
   height: calc(100vh - 90px);
@@ -28,7 +123,7 @@
 
 .main-content {
   height: 100%;
-  width: calc(100% - 70px);
+  width: calc(100% - 50px);
   background-color: lightgray;
 }
 
@@ -41,15 +136,6 @@
 
 footer {
   height: 90px;
-}
-
-/* ********** responsive *********** */
-
-@media screen and (min-width: 900px) {
-  .navbar {
-    width: 250px;
-    height: 100%;
-  }
 }
 
 /* debug  */
@@ -67,4 +153,47 @@ footer {
 
 .content {
   background-color: lightsalmon;
+}
+
+/* ********** responsive *********** */
+/* extra small */
+@media screen and (min-width: 576px) {
+  .sidebar {
+    width: 250px;
+    height: 100%;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon img {
+    width: 20px;
+    margin: 3px 10px 3px 0;
+  }
+
+  .spotify-logo {
+    padding-bottom: 15px;
+  }
+
+  .ico-spotify > a > h1 {
+    list-style: none;
+  }
+
+  .ico-spotify {
+    width: 40px;
+  }
+}
+
+/* small */
+@media screen and (min-width: 768px) {
+}
+
+/* medium */
+@media screen and (min-width: 992px) {
+}
+
+/* large */
+@media screen and (min-width: 1200px) {
 }
