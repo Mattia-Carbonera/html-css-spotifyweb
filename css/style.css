@@ -1,0 +1,70 @@
+/* # RESET */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* # UTILS */
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 1000px;
+  max-width: 100%;
+}
+
+.navbar {
+  width: 70px;
+  height: 100%;
+  background-color: lightcoral;
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 90px);
+}
+
+.main-content {
+  height: 100%;
+  width: calc(100% - 70px);
+  background-color: lightgray;
+}
+
+.header {
+  height: 90px;
+}
+
+.content {
+}
+
+footer {
+  height: 90px;
+}
+
+/* ********** responsive *********** */
+
+@media screen and (min-width: 900px) {
+  .navbar {
+    width: 250px;
+    height: 100%;
+  }
+}
+
+/* debug  */
+.main {
+  background-color: lightskyblue;
+}
+
+footer {
+  background-color: aqua;
+}
+
+.header {
+  background-color: bisque;
+}
+
+.content {
+  background-color: lightsalmon;
+}
