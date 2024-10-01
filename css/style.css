@@ -6,6 +6,12 @@
   padding: 0;
 }
 
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
 /* # UTILS */
 
 .container {
@@ -14,10 +20,16 @@
   width: 1000px;
   max-width: 100%;
 }
+
+.d-none {
+  display: none;
+}
+
 /* ____sidebar____ */
 .sidebar {
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
   width: 50px;
   height: 100%;
@@ -69,6 +81,7 @@
   font-size: 2rem;
   margin-right: 5px;
   background-color: lightgray;
+  display: none;
 }
 
 .library-playlist > ul li {
@@ -84,41 +97,41 @@
   padding: 12px;
 }
 
-.lower-sidebar img {
-  padding-bottom: 10px;
+.download-icon {
+  display: flex;
+  justify-content: center;
 }
 
-.lower-sidebar img:first-child {
-  height: 25px;
+.download-icon img {
+  height: 15px;
 }
 
-.download-icon,
 .profile-icon {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.download-icon > span,
+.profile-icon img {
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 50%;
+}
+
 .profile-icon > span {
   padding-left: 10px;
 }
 
 .download-icon {
-  border-bottom: 2px solid lightgray;
-  margin-bottom: 15px;
-}
-
-.lower-sidebar img:nth-child(2) {
-  background-color: lightgray;
-
-  padding: 5px;
-  border-radius: 50%;
+  margin-bottom: 8px;
 }
 
 /* ____main____ */
 .main {
   display: flex;
   height: calc(100vh - 90px);
+  z-index: 1;
 }
 
 .main-content {
@@ -155,9 +168,19 @@ footer {
   background-color: lightsalmon;
 }
 
+/* ____footer____ */
+
+.footer {
+  z-index: 2;
+}
+
 /* ********** responsive *********** */
 /* extra small */
 @media screen and (min-width: 576px) {
+  .d-none {
+    display: block;
+  }
+
   .sidebar {
     width: 250px;
     height: 100%;
@@ -177,12 +200,13 @@ footer {
     padding-bottom: 15px;
   }
 
-  .ico-spotify > a > h1 {
-    list-style: none;
-  }
-
   .ico-spotify {
     width: 40px;
+  }
+
+  .profile-icon img {
+    width: 25px;
+    height: 25px;
   }
 }
 
