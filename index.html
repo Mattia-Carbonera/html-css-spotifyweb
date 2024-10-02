@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- ---- fontawesome ---- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- ---- stylesheet ---- -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -21,10 +23,12 @@
           <div class="upper-sidebar">
             <a href="#">
               <div class="spotify-logo">
-                <div class="ico-spotify">
-                  <img src="./img/favicon.ico" alt="spotify logo" />
-                </div>
-                <h1 class="d-none">Spotify</h1>
+                
+                  <img src="./img/logo-small.svg" alt="spotify logo" />
+                  <img class="d-none" src="./img/logo.svg" alt="spotify logo" />
+
+                
+                
               </div>
             </a>
 
@@ -53,38 +57,40 @@
               <ul>
                 <a href="#">
                   <div class="add-playlist">
-                    <div class="add-playlist-button d-none">&plus;</div>
+                    <div class="add-playlist-button d-none"><span class="plus">&plus;</span></div>
                     <li class="d-none">Crea Playlist</li>
                   </div>
                 </a>
+                <div class="playlist">
 
-                <a href="#">
-                  <li class="d-none">Nome Playlist</li>
-                </a>
-
-                <a href="#">
-                  <li class="d-none">Nome Playlist</li>
-                </a>
-
-                <a href="#">
-                  <li class="d-none">Nome Playlist</li>
-                </a>
-
-                <a href="#">
-                  <li class="d-none">Nome Playlist</li>
-                </a>
-
-                <a href="#">
-                  <li class="d-none">Nome Playlist</li>
-                </a>
-
-                <a href="#">
-                  <li class="d-none">Nome Playlist</li>
-                </a>
-
-                <a href="#">
-                  <li class="d-none">Nome Playlist</li>
-                </a>
+                  <a href="#">
+                    <li class="d-none">Nome Playlist</li>
+                  </a>
+  
+                  <a href="#">
+                    <li class="d-none">Nome Playlist</li>
+                  </a>
+  
+                  <a href="#">
+                    <li class="d-none">Nome Playlist</li>
+                  </a>
+  
+                  <a href="#">
+                    <li class="d-none">Nome Playlist</li>
+                  </a>
+  
+                  <a href="#">
+                    <li class="d-none">Nome Playlist</li>
+                  </a>
+  
+                  <a href="#">
+                    <li class="d-none">Nome Playlist</li>
+                  </a>
+  
+                  <a href="#">
+                    <li class="d-none">Nome Playlist</li>
+                  </a>
+                </div>
               </ul>
             </div>
           </div>
@@ -108,19 +114,29 @@
         </div>
         <div class="main-content">
           <div class="header">
-            <div class="upgrade">
-              <span>EFFETTUA L'UPGRADE</span>
+            <div class="upgrade-container">
+
+              <a href="#">
+                <div class="upgrade">
+                  <span class="">EFFETTUA L'UPGRADE</span>
+                </div>
+                <a href="#">
+                  <div class="upgrade-hover">
+                    <span class="">EFFETTUA L'UPGRADE</span>
+                  </div>
+                </a>
             </div>
+            </a>
           </div>
           <div class="content">
             <div class="nav">
               <ul>
-                <li>IN EVIDENZA</li>
-                <li>PODCAST</li>
-                <li>CLASSIFICHE</li>
-                <li>GENERI E MOOD</li>
-                <li>NUOVE USCITE</li>
-                <li>SCOPRI</li>
+                <li><a href="#">IN EVIDENZA</a></li></a>
+                <li><a href="#">PODCAST</a></li>
+                <li><a href="#">CLASSIFICHE</a></li>
+                <li><a href="#">GENERI E MOOD</a></li>
+                <li><a href="#">NUOVE USCITE</a></li>
+                <li><a href="#">SCOPRI</a></li>
               </ul>
             </div>
             <div class="playlist-recently">
@@ -152,6 +168,37 @@
                   <h3>Split</h3>
                   <span>Subtitle</span>
                 </div>
+
+                <div class="a-cure-for-wellness card">
+                  <img src="./img/cure.jpeg" alt="split" />
+                  <h3>A cure for wellness</h3>
+                  <span>Subtitle</span>
+                </div>
+
+                <div class="sinister card">
+                  <img src="./img/sinister.jpeg" alt="split" />
+                  <h3>Sinister</h3>
+                  <span>Subtitle</span>
+                </div>
+              </div>
+            </div>
+            <div class="created-for">
+              <h2>Creato per John Doe</h2>
+              <span class="created-subtitle">Più ascolti, più accurati saranno i suggerimenti</span>
+              <div class="create-for-container">
+
+                <div class="altro-uno card">
+                  <img src="./img/metal_lifting.jpg" alt="heavy metal" />
+                  <h3>Relase radar</h3>
+                </div>
+
+                <div class="altro-due card">
+                  <img src="./img/stranger.jpeg" alt="stranger things" />
+                  <h3>
+                    Daily mix
+                  </h3>
+                </div>
+
               </div>
             </div>
           </div>
@@ -160,7 +207,56 @@
     </main>
 
     <footer>
-      <div class="footer"></div>
+      <div class="footer">
+        
+        <div class="left-footer">
+
+          <div class="trakc-image">
+            <img src="./img/sinister.jpeg" alt="sinister truck">
+          </div>
+
+          <div class="info-track">
+            <span>Sinister</span>
+            <span>Brano</span>
+            <span>Nome</span>
+          </div>
+
+          <div class="button-track">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-folder"></i>
+          </div>
+
+        </div>
+
+        <div class="center-footer">
+
+          <div class="commands">
+            <i class="fa-solid fa-shuffle"></i>
+            <i class="fa-solid fa-backward-step"></i>
+            <i class="fa-regular fa-circle-play"></i>
+            <i class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-rotate-right"></i>
+          </div>
+
+          <div class="progress-bar-container">
+            <div class="current-time">0:25</div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="total-time">4:35</div>
+          </div>
+
+        </div>
+
+        <div class="right-footer">
+          <i class="fa-solid fa-list"></i>
+          <i class="fa-solid fa-tv"></i>
+          <i class="fa-solid fa-volume-high"></i>
+          <div class="sound-bar">
+            <div class="progress-sound"></div>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
