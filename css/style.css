@@ -286,7 +286,7 @@ body {
   border-color: lime;
 }
 
-/* ------------------------ */
+/* ---------- CONTENT -------------- */
 
 .content {
   background-color: #141922;
@@ -331,6 +331,7 @@ body {
   flex-wrap: wrap;
   padding-bottom: 80px;
   gap: 1rem;
+  justify-content: space-around;
 }
 
 .recently-section-uno .card,
@@ -346,6 +347,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 280px;
+}
+
+.create-for-container {
+  display: flex;
+  gap: 3rem;
+  margin: 0 20px;
+  margin-bottom: 80px;
+  justify-content: center;
 }
 
 .card > .fa-circle-play {
@@ -389,13 +398,6 @@ body {
 .content img {
   height: 180px;
   margin-bottom: 10px;
-}
-
-.create-for-container {
-  display: flex;
-  gap: 3rem;
-  margin: 0 20px;
-  margin-bottom: 80px;
 }
 
 .popular-artist img {
@@ -594,7 +596,7 @@ footer {
   font-size: 0.8rem;
 }
 
-/* ********** responsive *********** */
+/* ********** RESPONSIVE *********** */
 /* extra small ******************/
 @media screen and (min-width: 576px) {
   .d-none {
@@ -680,6 +682,14 @@ footer {
     flex-wrap: wrap;
   }
 
+  .recently-container {
+    justify-content: center;
+  }
+
+  .create-for-container {
+    justify-content: flex-start;
+  }
+
   .recently-section-uno,
   .recently-section-due,
   .recently-section-tre {
@@ -702,6 +712,17 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+
+  .recently-container {
+    justify-content: space-around;
+  }
+
+  .recently-section-uno,
+  .recently-section-due,
+  .recently-section-tre {
+    justify-content: space-around;
+    flex-grow: 1;
   }
 }
 
