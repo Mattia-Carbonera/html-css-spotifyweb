@@ -411,7 +411,16 @@ body {
   padding-bottom: 50px;
 }
 
-/* ____footer____ */
+/* footer */
+
+/* ____ footer d-none ____ */
+
+.left-footer *,
+.right-footer * {
+  display: none;
+}
+
+/* _______________________ */
 
 footer {
   height: 90px;
@@ -487,15 +496,17 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
 }
 
 .fa-circle-play {
   padding: 0 10px;
   font-size: 2rem;
+  padding-bottom: 0.3rem;
 }
 .fa-circle-play:hover {
   font-size: 2.3rem;
+  padding-bottom: 0;
 }
 
 .fa-backward-step,
@@ -598,9 +609,15 @@ footer {
 }
 
 /* ********** RESPONSIVE *********** */
+
 /* extra small ******************/
 @media screen and (min-width: 576px) {
   .d-none {
+    display: block;
+  }
+
+  .left-footer *,
+  .right-footer * {
     display: block;
   }
 
@@ -673,6 +690,10 @@ footer {
 }
 
 /* small *************************/
+
+/* @media screen and (max-width: 767px) {
+} */
+
 @media screen and (min-width: 768px) {
   .playlist-recently {
   }
