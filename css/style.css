@@ -277,15 +277,6 @@ body {
   color: white;
 }
 
-/* .b-uno .underscore,
-.b-due .underscore,
-.b-tre .underscore,
-.b-quattro .underscore,
-.b-cinque .underscore,
-.b-sei .underscore {
-  display: block;
-} */
-
 .b-uno:hover .underscore,
 .b-due:hover .underscore,
 .b-tre:hover .underscore,
@@ -322,6 +313,8 @@ body {
 }
 
 .recently-container {
+  margin: 0 20px;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -331,10 +324,28 @@ body {
   flex-wrap: wrap;
 }
 
-.card {
+.recently-section-uno,
+.recently-section-due,
+.recently-section-tre {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+  gap: 1rem;
+}
+
+.recently-section-uno .card,
+.recently-section-due .card,
+.recently-section-tre .card {
+  margin-right: 20px;
+}
+
+.recently-container .card {
   position: relative;
   height: 180px;
   width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 280px;
 }
 
 .card > .fa-circle-play {
@@ -367,9 +378,6 @@ body {
   text-align: center;
 }
 
-.playlist-recently .card {
-}
-
 .card h3 {
   font-size: 0.8rem;
 }
@@ -398,17 +406,6 @@ body {
 .created-for,
 .created-for {
   padding-bottom: 50px;
-}
-
-.recently-section-uno,
-.recently-section-due,
-.recently-section-tre {
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  justify-content: space-around;
-  gap: 1rem;
-  padding-bottom: 80px;
 }
 
 /* ____footer____ */
@@ -598,7 +595,7 @@ footer {
 }
 
 /* ********** responsive *********** */
-/* extra small */
+/* extra small ******************/
 @media screen and (min-width: 576px) {
   .d-none {
     display: block;
@@ -672,12 +669,40 @@ footer {
   }
 }
 
-/* small */
+/* small *************************/
 @media screen and (min-width: 768px) {
+  .playlist-recently {
+  }
+
+  .recently-container,
+  .create-for-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .recently-section-uno,
+  .recently-section-due,
+  .recently-section-tre {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 80px;
+  }
+
+  .recently-container .card {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 280px;
+  }
 }
 
 /* medium */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
+  .recently-container,
+  .create-for-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 
 /* large */
