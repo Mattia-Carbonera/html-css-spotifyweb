@@ -36,7 +36,9 @@ body {
   z-index: 1;
 
   width: 50px;
-  height: 100%;
+  height: calc(100vh - 90px);
+
+  overflow-y: auto;
 
   background-color: #000000;
 }
@@ -74,6 +76,7 @@ body {
 
 .icon {
   width: 30px;
+  margin-bottom: 10px;
 }
 
 .add-playlist {
@@ -83,15 +86,23 @@ body {
   padding: 10px 0;
 }
 
+.upper-side-logo {
+  width: 100%;
+}
+
+.add-playlist-button i {
+  color: #000000;
+}
+
 .add-playlist-button {
   text-align: center;
 
-  height: 35px;
-  width: 35px;
+  padding: 3px;
   font-size: 2rem;
   margin-right: 5px;
   background-color: gray;
   display: none;
+  line-height: 100%;
 }
 
 .add-playlist:hover span,
@@ -157,6 +168,11 @@ body {
 
 .download-icon {
   margin-bottom: 8px;
+  color: gray;
+}
+
+.download-icon:hover {
+  color: white;
 }
 
 .download-icon > span {
@@ -262,9 +278,6 @@ body {
   height: calc(100vh - 180px);
 
   overflow-y: auto;
-
-  /* debug */
-  /* min-height: 100px; */
 }
 
 .content h2 {
@@ -284,20 +297,67 @@ body {
   color: white;
 }
 
+.recently-container {
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  height: 180px;
+  width: 180px;
+}
+
+.card > .fa-circle-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 4rem;
+
+  display: none;
+}
+
+.card:hover .fa-circle-play {
+  display: block;
+  font-size: 4rem;
+}
+
+.fa-circle-play:hover {
+}
+
+.card:hover img {
+  opacity: 0.4;
+}
+
+/* .recently-container i {
+  top: 50%;
+  left: 50%;
+  color: white;
+} */
+
 .recently-container,
 .create-for-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+
+  /* gap: 0.5rem; */
 }
 
 .card {
   /* display: flex;
   flex-direction: column; */
-  margin: 0 15px 0 20px;
-  width: 180px;
+  /* margin: 0 15px 0 20px; */
+  max-width: 180px;
+  min-width: 100px;
+
+  margin-bottom: 30px;
 
   text-align: center;
+}
+
+.playlist-recently .card {
 }
 
 .card h3 {
@@ -314,6 +374,9 @@ body {
 }
 
 .create-for-container {
+  display: flex;
+  gap: 3rem;
+  margin: 0 20px;
   margin-bottom: 20px;
 }
 
@@ -325,6 +388,15 @@ body {
 .created-for,
 .created-for {
   padding-bottom: 50px;
+}
+
+.recently-section-uno,
+.recently-section-due,
+.recently-section-tre {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  gap: 1rem;
 }
 
 /* ____footer____ */
@@ -358,6 +430,14 @@ footer {
 
 .trakc-image img {
   height: 50px;
+}
+
+.info-track span a {
+  color: gray;
+}
+.info-track span a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 .info-track span {
@@ -394,7 +474,7 @@ footer {
 .commands {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -415,11 +495,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 
   width: 100%;
 }
 
 .progress-bar {
+  position: relative;
+
   display: flex;
   flex-grow: 1;
   height: 3px;
@@ -435,6 +518,23 @@ footer {
   width: 20%;
   background-color: white;
   border-radius: 2px;
+}
+
+.progress-bar:hover .progress::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.progress-bar:hover .progress {
+  background-color: lime;
 }
 
 /* right footer */
@@ -454,13 +554,31 @@ footer {
   height: 2px;
   min-width: 50px;
   background-color: gray;
+  cursor: pointer;
 }
 
 .progress-sound {
+  position: relative;
   height: 100%;
   width: 30%;
   background-color: white;
   margin: 0;
+}
+
+.sound-bar:hover .progress-sound:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(30%, -50%);
+}
+
+.sound-bar:hover .progress-sound {
+  background-color: lime;
 }
 
 .right-footer .fa-solid {
@@ -525,12 +643,20 @@ footer {
     height: 25px;
   }
 
+  /* main */
+
+  /* footer */
+
   .right-footer .fa-solid {
     font-size: 1rem;
   }
 
   .button-track i {
     display: inline;
+  }
+
+  .commands {
+    gap: 1rem;
   }
 }
 
