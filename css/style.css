@@ -216,6 +216,8 @@ body {
 }
 
 .upgrade-hover {
+  display: none;
+
   padding-top: 13px;
 
   height: 50px;
@@ -224,10 +226,6 @@ body {
   border-radius: 30px;
   border: 2px solid white;
   font-weight: bold;
-}
-
-.header .upgrade-hover {
-  display: none;
 }
 
 .upgrade-container:hover .upgrade {
@@ -327,6 +325,12 @@ body {
   gap: 1rem;
 }
 
+.recently-container,
+.create-for-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
   position: relative;
   height: 180px;
@@ -350,31 +354,11 @@ body {
   font-size: 4rem;
 }
 
-.fa-circle-play:hover {
-}
-
 .card:hover img {
   opacity: 0.4;
 }
 
-/* .recently-container i {
-  top: 50%;
-  left: 50%;
-  color: white;
-} */
-
-.recently-container,
-.create-for-container {
-  display: flex;
-  flex-wrap: wrap;
-
-  /* gap: 0.5rem; */
-}
-
 .card {
-  /* display: flex;
-  flex-direction: column; */
-  /* margin: 0 15px 0 20px; */
   max-width: 180px;
   min-width: 100px;
 
@@ -420,6 +404,7 @@ body {
 .recently-section-due,
 .recently-section-tre {
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-around;
   gap: 1rem;
