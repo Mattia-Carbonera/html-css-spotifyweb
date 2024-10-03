@@ -332,6 +332,7 @@ body {
   padding-bottom: 80px;
   gap: 1rem;
   justify-content: space-around;
+  flex-grow: 1;
 }
 
 .recently-section-uno .card,
