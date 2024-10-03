@@ -375,7 +375,7 @@ body {
   font-size: 4rem;
 }
 
-.card:hover img {
+.recently-container .card:hover img {
   opacity: 0.4;
 }
 
