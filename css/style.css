@@ -261,6 +261,14 @@ body {
   padding: 20px 10px;
 }
 
+.underscore {
+  width: 60%;
+  margin: auto;
+  margin-top: 2px;
+
+  border: 2px solid transparent;
+}
+
 .nav li a {
   color: gray;
 }
@@ -269,6 +277,24 @@ body {
 
 .nav li:hover a {
   color: white;
+}
+
+/* .b-uno .underscore,
+.b-due .underscore,
+.b-tre .underscore,
+.b-quattro .underscore,
+.b-cinque .underscore,
+.b-sei .underscore {
+  display: block;
+} */
+
+.b-uno:hover .underscore,
+.b-due:hover .underscore,
+.b-tre:hover .underscore,
+.b-quattro:hover .underscore,
+.b-cinque:hover .underscore,
+.b-sei:hover .underscore {
+  border-color: lime;
 }
 
 /* ------------------------ */
@@ -377,7 +403,7 @@ body {
   display: flex;
   gap: 3rem;
   margin: 0 20px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
 .popular-artist img {
@@ -397,6 +423,7 @@ body {
   flex-grow: 1;
   justify-content: space-around;
   gap: 1rem;
+  padding-bottom: 80px;
 }
 
 /* ____footer____ */
