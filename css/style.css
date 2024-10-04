@@ -370,10 +370,6 @@ body {
   display: none;
 }
 
-.card:hover > .fa-circle-play {
-  padding-bottom: 0.3rem;
-}
-
 .card:hover .fa-circle-play {
   display: block;
   font-size: 4rem;
